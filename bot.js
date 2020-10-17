@@ -34,7 +34,9 @@ client.on("message", async message => {
   if(message.author.id === "755580145078632508" && message.embeds[0].title === "A trick-or-treater has stopped by!") {
     var n = message.embeds[0].description.split(" ")
     var p = n.pop()
+    sleep.msleep(1500) // this is here to make it more realistic, just delete it if you don't want it.
     message.channel.send(p)
+  }
   }
 });
 
