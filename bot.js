@@ -1,4 +1,3 @@
-// Load up the discord.js library
 const Discord = require("discord.js-selfbot");
 const sleep = require('sleep');
 const randomWords = require("random-words");
@@ -16,6 +15,7 @@ client.on("ready", () => {
   console.log(
     `Bot has started, with ${client.users.cache.size} users, in ${client.channels.cache.size} channels of ${client.guilds.cache.size} guilds.`
   );
+/*
   setInterval(function() {
     const server = client.guilds.cache.get("637741159904706570")
     var channel = server.channels.cache.get("637742780797681664")
@@ -24,6 +24,7 @@ client.on("ready", () => {
       channel.send(wordsss)
     })
   }, 100000)
+*/
 })
   
 client.on("message", async message => {
@@ -37,15 +38,3 @@ client.on("message", async message => {
 });
 
 client.login(config.token);
-
-const http = require("http");
-const express = require("express");
-const app = express();
-app.get("/", (request, response) => {
-  console.log(Date.now() + " Ping Received");
-  response.sendStatus(200);
-});
-app.listen(process.env.PORT);
-setInterval(() => {
-  http.get(`http://${process.env.PROJECT_DOMAIN}.glitch.me/`);
-}, 280000);
