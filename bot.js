@@ -6,15 +6,15 @@ const randomMillisecond = require('random-millisecond');
 const trim = (str, max) =>
   str.length > max ? `${str.slice(0, max - 3)}...` : str;
 
-const client = new Discord.Client();
-const config = require("./config.json");
+const client = new Discord.Client()
+const config = require("./config.json")
 
-client.on("error", console.error);
+client.on("error", console.error)
 
 client.on("ready", () => {
   console.log(
     `Bot has started, with ${client.users.cache.size} users, in ${client.channels.cache.size} channels of ${client.guilds.cache.size} guilds.`
-  );
+  )
 /*
   setInterval(function() {
     const server = client.guilds.cache.get("637741159904706570")
@@ -28,7 +28,7 @@ client.on("ready", () => {
 })
   
 client.on("message", async message => {
-  if (message.channel.type === 'dm') return;
+  if (message.channel.type === 'dm') return
   
   if(message.author.id === "755580145078632508" && message.embeds[0].title === "A trick-or-treater has stopped by!") {
     var n = message.embeds[0].description.split(" ")
@@ -37,4 +37,4 @@ client.on("message", async message => {
   }
 });
 
-client.login(config.token);
+client.login(config.token)
