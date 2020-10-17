@@ -20,9 +20,10 @@ client.on("ready", () => {
     const server = client.guilds.cache.get("637741159904706570")
     var channel = server.channels.cache.get("637742780797681664")
     
-    randomWords({ min: 2, max: 4}).forEach(wordsss => {
-      channel.send(wordsss)
-    })
+    var x = randomWords({ min: 2, max: 4, join: ' '})
+    channel.send(x[0])
+    channel.send(x[1])
+    channel.send(x[2])
   }, 100000)
 */
 })
