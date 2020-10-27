@@ -1,7 +1,6 @@
 const Discord = require("discord.js-selfbot");
 const sleep = require('sleep');
-const randomWords = require("random-words");
-const randomMillisecond = require('random-millisecond');
+//const randomWords = require("random-words");
 
 const trim = (str, max) =>
   str.length > max ? `${str.slice(0, max - 3)}...` : str;
