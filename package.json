@@ -18,8 +18,7 @@
     "discord.js-selfbot": "^12.0.2",
     "express": "^4.17.1",
     "sleep": "^6.3.0",
-    "random-words": "^1.1.0",
-    "random-millisecond": "^1.0.4"
+    "random-words": "^1.1.0"
   },
   "repository": {
     "url": "https://glitch.com/edit/#!/hello-express"
